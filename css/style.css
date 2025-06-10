@@ -1,0 +1,325 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+section {
+  margin-top: 120px; /* Prevent navbar from overlapping content */
+  padding-bottom: 80px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+}
+
+.navbar-nav .nav-link {
+  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+  transform: scale(1.1) rotateY(5deg); /* 3D hover effect */
+}
+
+.navbar-nav {
+  margin-right: 20px;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+}
+
+/* Jumbotron Section */
+.jumbotron {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  text-align: center;
+  padding: 150px 0 100px;
+  margin-top: 100px;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease, opacity 0.6s ease;
+}
+
+.jumbotron img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jumbotron h1 {
+  font-size: 3rem;
+  transition: transform 0.5s ease, color 0.3s ease;
+}
+
+.jumbotron:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0.95;
+}
+
+.jumbotron h1:hover {
+  transform: scale(1.1);
+  color: #feb47b;
+}
+
+.jumbotron:hover img {
+  transform: rotateY(15deg) scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+#about h2 {
+  color: #007bff;
+}
+
+#about h3 {
+  color: #6c757d;
+}
+
+#about ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#about ul li {
+  margin-bottom: 10px;
+}
+
+#about .col-lg-6 img {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+#about .col-lg-6:hover img {
+  transform: scale(1.1) rotateY(10deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Projects */
+.card {
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, perspective 0.4s ease;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  border-radius: 15px;
+}
+
+.card-body {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 0 0 15px 15px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for 3D effect */
+}
+
+.card-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Contact Section */
+#contact .form-control {
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+#contact .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border-radius: 25px;
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #ff7e5f;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+  color: #feb47b;
+  transform: scale(1.1) rotateY(5deg); /* 3D hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .navbar-nav .nav-item {
+    margin-left: 15px;
+  }
+
+  .jumbotron h1 {
+    font-size: 2.8rem;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-nav .nav-item {
+    margin-left: 10px;
+  }
+
+  .jumbotron h1 {
+    font-size: 2.5rem;
+  }
+
+  .card-body {
+    padding: 12px;
+  }
+
+  .jumbotron {
+    padding: 120px 0 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 1rem;
+  }
+
+  .jumbotron {
+    padding: 80px 0 60px;
+  }
+
+  .jumbotron h1 {
+    font-size: 2rem;
+  }
+
+  .jumbotron img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+  .col-lg-6, .col-md-6 {
+    text-align: center;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-nav .nav-item {
+    margin-left: 8px;
+  }
+
+  .jumbotron {
+    padding: 60px 0 40px;
+  }
+
+  .jumbotron h1 {
+    font-size: 1.8rem;
+  }
+
+  .jumbotron img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card {
+    margin-bottom: 10px;
+  }
+
+  .card-img-top {
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+/* Animation for elements when they come into view */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px) rotateY(-10deg) scale(0.95); /* Initial position for animation */
+  transition: transform 0.4s ease, opacity 0.6s ease; /* Smooth transition */
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#contact .btn {
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+#contact .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#contact .form-control {
+  border-radius: 20px;
+  padding: 12px 16px;
+}
